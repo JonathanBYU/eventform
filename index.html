@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Ticket Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="/favicon.webp">
+</head>
+<body>
+    <main class="wrapper">
+        <h1>Event Ticket</h1>
+        <form id="eventTicketForm">
+            <div class="field">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" autocomplete="given-name" required>
+            </div>
+            <div class="field">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" autocomplete="family-name" required>
+            </div>
+            <div class="field full">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+                <label for="type">Type</label>
+                <select id="type" name="type" required>
+                    <option value="">Choose One</option>
+                    <option value="student">Student</option>
+                    <option value="guest">Guest</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="date">Event Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="field full">
+                <label for="studentinumber" id="studentinumberdisplay" hidden>Student I#</label>
+                <input type="text" id="studentinumber" name="studentinumber" maxlength="9" hidden>
+            </div>
+            <div class="field full">
+                <label for="accesscode" id="accesscodedisplay" hidden>Access Code</label>
+                <input type="text" id="accesscode" name="accesscode" hidden>
+            </div>
+            <button class="full" type="submit">Create Ticket</button>
+        </form>
+        <section id="output" aria-live="polite"></section>
+    </main>
+</body>
+</html>
